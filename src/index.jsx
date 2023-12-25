@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import "./assets/style/s.scss"
-// import myImg1 from "./assets/img/logo192.png";
-// import myImg2 from "./assets/img/logo512.png";
+import "./assets/style/s.scss";
+import myImg from "./assets/img/img.jpg";
 
-// const name = 'zeynab';
-// const age = '20';
-// const introduce = <h2>Hello, my name is {name} and I am {age} years old </h2>
+const name = <h1 className="introduceText">Hello, my name is <span>zeynab pahlevani</span></h1>
+
+const introduce = <p>I am a junior front end developer</p>;
 // const styleSheet = {
 //   color: "green",
 //   fontSize: 80,
@@ -25,10 +24,15 @@ import "./assets/style/s.scss"
 // const sending = true;
 // const myJSX = sending == 'true' && <div>lodinge...</div>;
 
+/////
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div>
-    {/* <img style={{width: 300, background: 'red'}} src={myImg1} />
-    <img style={{width: 300, background: 'green'}} src={myImg2} /> */}
+  <div className="conteiner">
+    <img className="img" src={myImg} />
+    <p className="introduceText">
+      {name}
+      {introduce}
+    </p>
   </div>
 );
